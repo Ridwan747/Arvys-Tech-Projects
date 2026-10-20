@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Grade Calculator</h1>
+            <p>Enter student scores for five subjects and calculate grades.</p>
+        </header>
+
+        <div class="form-container">
+            <h2>Add Student Scores</h2>
+            <form id="gradeForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name">
+                </div>
+
+                <div class="subjects">
+                    <div class="form-group">
+                        <label for="math">Artificial Intelligence</label>
+                        <input type="number" id="math" min="0" max="100" placeholder="0 - 100">
+                    </div>
+                    <div class="form-group">
+                        <label for="english">Computer Architecture And Org. 11</label>
+                        <input type="number" id="english" min="0" max="100" placeholder="0 - 100">
+                    </div>
+                    <div class="form-group">
+                        <label for="science">Computer Lab 3B</label>
+                        <input type="number" id="science" min="0" max="100" placeholder="0 - 100">
+                    </div>
+                    <div class="form-group">
+                        <label for="history">Siwes</label>
+                        <input type="number" id="history" min="0" max="100" placeholder="0 - 100">
+                    </div>
+                    <div class="form-group">
+                        <label for="art">Mobile Application Development</label>
+                        <input type="number" id="art" min="0" max="100" placeholder="0 - 100">
+                    </div>
+                </div>
+
+                <button type="submit">Calculate & Add</button>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <h2>Student Results</h2>
+            <div class="table-wrapper">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Artificial Intelligence</th>
+                            <th>Computer Architecture And Org. 11</th>
+                            <th>Computer Lab 3B</th>
+                            <th>Siwes</th>
+                            <th>Mobile Application Development</th>
+                            <th>Total</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                    </tbody>
+                </table>
+                <p class="empty-message" id="emptyMessage">No students added yet.</p>
+            </div>
+
+            <div class="summary" id="summary">
+                <p id="highestStudent"></p>
+                <p id="lowestSubject"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
